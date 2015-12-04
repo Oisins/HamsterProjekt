@@ -15,7 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
-.pck
+.pkc
 
 # External tool builders
 .externalToolBuilders/
