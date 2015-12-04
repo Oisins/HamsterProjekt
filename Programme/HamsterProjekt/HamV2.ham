@@ -1,0 +1,17 @@
+/*class*/class HamV2 extends Hamster {
+    public void vorUm(int n){
+    	while(n != 0 && this.vornFrei()){
+    		n--;
+    		this.vor();
+    	}
+    }
+    public void dreheUm(int n){
+    	while(n > 0){
+    		this.linksUm();
+    		n--;
+    	}
+    }
+    int random(int min, int max){
+		return (int)(Math.random() * max) + min;
+	}
+}
