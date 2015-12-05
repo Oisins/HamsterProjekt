@@ -1,8 +1,8 @@
 /*class*/class HamV2 extends Hamster {
-	public int getX(){
+	public int getY(){
 		return this.getSpalte();
 	}
-	public int getY(){
+	public int getX(){
 		return this.getReihe();
 	}
     public void vor(int n){
