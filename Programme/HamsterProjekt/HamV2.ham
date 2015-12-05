@@ -1,5 +1,5 @@
 /*class*/class HamV2 extends Hamster {
-    public void vorUm(int n){
+    public void vor(int n){
     	while(n != 0 && this.vornFrei()){
     		n--;
     		this.vor();
@@ -17,9 +17,11 @@
     int random(int min, int max){
 		return (int)(Math.random() * max) + min;
 	}
-	void nimmAlle(){
-		while(this.kornDa()){
+	void nimm(int anzahl){
+		int i = 0;
+		while(this.kornDa() && i != anzahl){
 			this.nimm();
+			i++;
 		}
 	}
 	int anzahlKoerner(){
@@ -30,11 +32,11 @@
 		}
 		return n;
 	}
-	void gib(int anzhl){
-		super().nimm();
+	void gib(int anzahl){
 		int i = 0;
-		while(i < anzahl && !this.maulLeer()){
-			super().nimm();
+		while(i != anzahl && !this.maulLeer()){
+			this.gib();
+			i++;
 		}
 	}
 }
