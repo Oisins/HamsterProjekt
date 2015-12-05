@@ -1,11 +1,14 @@
 /*class*/class HamV2 extends Hamster {
-    public void vorUm(int n){
+    public void vor(int n){
     	while(n != 0 && this.vornFrei()){
     		n--;
     		this.vor();
     	}
     }
     public void dreheUm(int n){
+    	if(n < 0){
+    		n = n + 4;
+    	}
     	while(n > 0){
     		this.linksUm();
     		n--;
@@ -13,5 +16,27 @@
     }
     int random(int min, int max){
 		return (int)(Math.random() * max) + min;
+	}
+	void nimm(int anzahl){
+		int i = 0;
+		while(this.kornDa() && i != anzahl){
+			this.nimm();
+			i++;
+		}
+	}
+	int anzahlKoerner(){
+		int n = 0;
+		while(this.kornDa()){
+			this.nimm();
+			n++;
+		}
+		return n;
+	}
+	void gib(int anzahl){
+		int i = 0;
+		while(i != anzahl && !this.maulLeer()){
+			this.gib();
+			i++;
+		}
 	}
 }
