@@ -228,3 +228,4 @@ pip-log.txt
 lib/cachedir/packages/packages.idx
 Programme/settings.properties
 syserr.txt
+*.class
