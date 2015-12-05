@@ -1,7 +1,8 @@
 /*object-oriented program*/void main() {
     
 }
-static int[][] getDatei(){
-	int[][] array = {{0, 1, 0}, {1, 1, 1}, {0, 1, 0}};
+static int[][][] getDatei(){
+	int[][][] array = {{0, 1, 0}, {1, 1, 1}, {0, 1, 0},
+					  {{1, 0, 1}, {0, 0, 0}, {1, 0, 1}};
 	return array;
 }
