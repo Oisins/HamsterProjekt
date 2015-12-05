@@ -227,3 +227,4 @@ pip-log.txt
 *.idx
 lib/cachedir/packages/packages.idx
 Programme/settings.properties
+syserr.txt
