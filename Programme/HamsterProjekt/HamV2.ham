@@ -1,9 +1,9 @@
 /*class*/class HamV2 extends Hamster {
 	public int getY(){
-		return this.getSpalte();
+		return this.getSpalte() + 1;
 	}
 	public int getX(){
-		return this.getReihe();
+		return this.getReihe() + 1;
 	}
     public void vor(int n){
     	while(n != 0 && this.vornFrei()){
