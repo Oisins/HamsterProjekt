@@ -1,3 +1,24 @@
 /*object-oriented program*/void main() {
-    
+   HamV2 ham = new HamV2();
+   ham.init(0,0,1,1);
+   while (ham.vornFrei()){
+   ham.vorUm(-1);
+   ham.dreheUm(3);
+   if(ham.vornFrei()){
+   ham.vor();
+   ham.dreheUm(3);}
+   ham.vorUm(-1);
+   ham.dreheUm(1);
+   if(ham.vornFrei()){
+   ham.vor();
+   ham.dreheUm(1);} 
+   }
+   
 }
+
+
+
+
+
+
+

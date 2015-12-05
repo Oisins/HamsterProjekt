@@ -224,3 +224,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.idx
+lib/cachedir/packages/packages.idx
+Programme/settings.properties
