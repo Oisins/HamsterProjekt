@@ -1,0 +1,6 @@
+/*object-oriented program*/void main() {
+    HamV2 ham = new HamV2();
+    ham.init(1,1,0,0);
+    ham.vor();
+    ham.dreheUm();
+}

@@ -6,6 +6,9 @@
     	}
     }
     public void dreheUm(int n){
+    	if(n < 0){
+    		n = n + 4;
+    	}
     	while(n > 0){
     		this.linksUm();
     		n--;
@@ -13,5 +16,25 @@
     }
     int random(int min, int max){
 		return (int)(Math.random() * max) + min;
+	}
+	void nimmAlle(){
+		while(this.kornDa()){
+			this.nimm();
+		}
+	}
+	int anzahlKoerner(){
+		int n = 0;
+		while(this.kornDa()){
+			this.nimm();
+			n++;
+		}
+		return n;
+	}
+	void gib(int anzhl){
+		super().nimm();
+		int i = 0;
+		while(i < anzahl && !this.maulLeer()){
+			super().nimm();
+		}
 	}
 }
