@@ -7,6 +7,7 @@
 *.java
 *.tmp
 .tmp
+*.class
 
 #################
 ## Eclipse
@@ -224,6 +225,8 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#CUSTOM
 *.idx
 lib/cachedir/packages/packages.idx
 Programme/settings.properties
