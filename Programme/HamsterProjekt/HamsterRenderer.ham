@@ -1,11 +1,28 @@
-/*object-oriented program*/void main() {
+/*object-oriented program*/import java.io.IOException;
+import java.io.File;
+
+void main() {
 	HamV2 ham = new HamV2();
-	ham.init(1,1,1,100);
+	ham.init(1,1,1,9999);
 	
-	int[][][] Datei = LeanderMockup.getDatei();
+	//File currentDir = new File("Test.txt");
+	//ham.schreib("" + currentDir.getAbsoluteFile());
+	
+	int[][][] Datei = null;
+	//DateiIO leser = new DateiIO();
+	//int[][][] Datei = leser.main(String[]);
+	
+	try{
+	Datei = DateiIO.main("");
+	}catch(IOException e){
+	System.out.println("Error");
+	}
 	for(int i = 0;i<Datei.length;i++){
 	int[][] L = Datei[i];
 	//ham.gib(L[ham.getX()][ham.getY()] * 9);
+	//ham.schreib("" + L[3][0]);
+	//ham.schreib("" + L[0][3]);
+	ham.schreib("WARNUNG: Diese Muster zeigen zurzeit nicht das richtige");
 	while(true){
 		while(ham.vornFrei()){
 			ham.gib(L[ham.getX()][ham.getY()] * 12);
