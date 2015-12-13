@@ -45,4 +45,12 @@
 			i++;
 		}
 	}
+	int musterAuswahl(){
+		int Auswahl = this.liesZahl("Welches Muster(1-6)");
+		if(Auswahl<7&&Auswahl>0){
+			return Auswahl;
+		}else{
+			return this.musterAuswahl();
+		}
+	}
 }
