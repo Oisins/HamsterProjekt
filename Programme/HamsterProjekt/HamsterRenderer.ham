@@ -1,67 +1,57 @@
 /*object-oriented program*/import java.io.IOException;
-import java.io.File;
 
 void main() {
 	HamV2 ham = new HamV2();
 	ham.init(1,1,1,9999);
-	
-	//File currentDir = new File("Test.txt");
-	//ham.schreib("" + currentDir.getAbsoluteFile());
-	
 	int[][][] Datei = null;
-	//DateiIO leser = new DateiIO();
-	//int[][][] Datei = leser.main(String[]);
 	
 	try{
-	Datei = DateiIO.main("");
+		Datei = DateiIO.getDatei();
 	}catch(IOException e){
-	System.out.println("Error");
+		System.out.println("Error");
 	}
 	for(int i = 0;i<Datei.length;i++){
-	int[][] L = Datei[i];
-	//ham.gib(L[ham.getX()][ham.getY()] * 9);
-	//ham.schreib("" + L[3][0]);
-	//ham.schreib("" + L[0][3]);
-	ham.schreib("WARNUNG: Diese Muster zeigen zurzeit nicht das richtige");
-	while(true){
-		while(ham.vornFrei()){
+		int[][] L = Datei[i];
+		ham.schreib("WARNUNG: Diese Muster zeigen zurzeit nicht das richtige");
+		while(true){
+			while(ham.vornFrei()){
+				ham.gib(L[ham.getX()][ham.getY()] * 12);
+				ham.vor();
+			}
 			ham.gib(L[ham.getX()][ham.getY()] * 12);
-			ham.vor();
-		}
-		ham.gib(L[ham.getX()][ham.getY()] * 12);
+			ham.dreheUm(2);
+			ham.vor(-1);
+			ham.dreheUm(1);
+			if(ham.vornFrei()){
+				ham.vor();
+				ham.dreheUm(1);
+			}else{
+				break;
+			}
+		}	
 		ham.dreheUm(2);
 		ham.vor(-1);
-		ham.dreheUm(1);
-		if(ham.vornFrei()){
-			ham.vor();
-			ham.dreheUm(1);
-		}else{
-			break;
-		}
-	}	
-	ham.dreheUm(2);
-	ham.vor(-1);
-	ham.dreheUm(-1);
-	ham.schreib("Nächste Szene");
-	while(true){
-		while(ham.vornFrei()){
+		ham.dreheUm(-1);
+		ham.schreib("Nächste Szene");
+		while(true){
+			while(ham.vornFrei()){
+				ham.nimm(-1);
+				ham.vor();
+			}
 			ham.nimm(-1);
-			ham.vor();
+			ham.dreheUm(2);
+			ham.vor(-1);
+			ham.dreheUm(1);
+			if(ham.vornFrei()){
+				ham.vor();
+				ham.dreheUm(1);
+			}else{
+				break;
+			}
 		}
-		ham.nimm(-1);
 		ham.dreheUm(2);
 		ham.vor(-1);
-		ham.dreheUm(1);
-		if(ham.vornFrei()){
-			ham.vor();
-			ham.dreheUm(1);
-		}else{
-			break;
-		}
-	}
-	ham.dreheUm(2);
-	ham.vor(-1);
-	ham.dreheUm(-1);
+		ham.dreheUm(-1);
 	}			
 } 
   
