@@ -10,7 +10,8 @@ void main() {
 	}catch(IOException e){
 		System.out.println("Error");
 	}
-	for(int i = 0;i<Datei.length;i++){
+	for(int zaehler = 0;zaehler<6;zaehler++){
+		int i = ham.musterAuswahl();
 		int[][] L = Datei[i];
 		while(true){
 			while(ham.vornFrei()){
@@ -31,7 +32,7 @@ void main() {
 		ham.dreheUm(2);
 		ham.vor(-1);
 		ham.dreheUm(-1);
-		ham.schreib("Nächste Szene");
+		ham.schreib("Naechste Szene");
 		while(true){
 			while(ham.vornFrei()){
 				ham.nimm(-1);
@@ -53,4 +54,3 @@ void main() {
 		ham.dreheUm(-1);
 	}			
 } 
-  
