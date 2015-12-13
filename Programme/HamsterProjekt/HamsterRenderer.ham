@@ -13,7 +13,6 @@ void main() {
 	for(int zaehler = 0;zaehler<6;zaehler++){
 		int i = ham.musterAuswahl();
 		int[][] L = Datei[i];
-		ham.schreib("WARNUNG: Diese Muster zeigen zurzeit nicht das richtige");
 		while(true){
 			while(ham.vornFrei()){
 				ham.gib(L[ham.getX()][ham.getY()] * 12);
