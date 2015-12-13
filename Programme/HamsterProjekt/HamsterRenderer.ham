@@ -33,7 +33,7 @@ void main() {
 		ham.dreheUm(2);
 		ham.vor(-1);
 		ham.dreheUm(-1);
-		ham.schreib("N�chste Szene");
+		ham.schreib("Naechste Szene");
 		while(true){
 			while(ham.vornFrei()){
 				ham.nimm(-1);
